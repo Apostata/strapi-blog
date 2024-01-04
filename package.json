@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "strapi build",
+    "build-plugin": "cd src/plugins/github-projects/ && npm run build",
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
