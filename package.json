@@ -9,27 +9,29 @@
   },
   "scripts": {
     "build": "strapi build",
-    "build-plugin": "cd src/plugins/github-projects/ && npm run build",
+    "build:prod": "cross-env NODE_ENV=production strapi build",
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
     "watch-admin": "strapi develop --watch-admin"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "^4.15.5",
-    "@strapi/plugin-graphql": "^4.15.5",
-    "@strapi/plugin-i18n": "^4.15.5",
-    "@strapi/plugin-users-permissions": "^4.15.5",
+    "@strapi/plugin-cloud": "^4.16.2",
+    "@strapi/plugin-graphql": "^4.16.2",
+    "@strapi/plugin-i18n": "^4.16.2",
+    "@strapi/plugin-users-permissions": "^4.16.2",
     "@strapi/provider-email-nodemailer": "^4.16.2",
-    "@strapi/strapi": "^4.15.5",
+    "@strapi/strapi": "^4.16.2",
     "better-sqlite3": "^9.2.2",
     "pg": "^8.11.3",
     "pg-connection-string": "^2.6.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
-    "strapi-plugin-github-projects": "^1.0.0",
     "styled-components": "5.3.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
@@ -37,6 +39,9 @@
   },
   "volta": {
     "node": "20.10.0"
+  },
+  "overrides": {
+    "graphql": "16.8.1"
   },
   "strapi": {
     "uuid": "2e8e9101-2b9a-4bb3-8277-f26507208fe3"
